@@ -1,0 +1,57 @@
+.app-content {
+  width: 80%;
+  margin: 0 10%;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.app-content header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.graph-container {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.graph {
+  width: 800px;
+  height: 500px;
+}
+
+.graph .labels.x-labels {
+  text-anchor: middle;
+}
+
+.graph .labels.y-labels {
+  text-anchor: end;
+}
+
+.graph .grid {
+  stroke: #ccc;
+  stroke-dasharray: 0;
+  stroke-width: 1;
+}
+
+.labels {
+  font-size: 13px;
+}
+
+.label-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  fill: black;
+}
+
+.data {
+  fill: red;
+  stroke-width: 1;
+}

@@ -1,0 +1,21 @@
+{
+  "extends": "airbnb-base",
+
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+
+  "rules": {
+    "max-len": ["error", 120, 2]
+  },
+
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+
+  "globals": {
+    "moment": true
+  }
+}

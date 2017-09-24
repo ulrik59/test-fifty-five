@@ -1,0 +1,26 @@
+{
+  "name": "test-fifty-five",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
+  "author": "Martin Lenglet",
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "https://gitlab.com/eleven-labs/nebula-backbone",
+  "bugs": {
+    "url": "https://gitlab.com/eleven-labs/nebula-backbone/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/eleven-labs/nebula-backbone.git"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}

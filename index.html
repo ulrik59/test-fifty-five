@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Test Fifty Five</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-Xqcy5ttufkC3rBa8EdiAyA1VgOGrmel2Y+wxm4K3kI3fcjTWlDWrlnxyD6hOi3PF" crossorigin="anonymous">
+  <link rel="stylesheet" href="fifty-five.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Fifty-Five Test</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="app-content">
+    <header>
+      <h3 id="title"></h3>
+      <button id="refresh-button" type="button" name="refresh" class="btn btn-info">
+        <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+        Refresh
+      </button>
+    </header>
+
+    <div class="graph-container">
+      <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="graph" aria-labelledby="title" role="img">
+        <title class="graph-title"></title>
+
+        <g class="grid x-grid" id="xGrid">
+          <line x1="90" x2="90" y1="5" y2="371"></line>
+        </g>
+
+        <g class="grid y-grid" id="yGrid">
+          <line x1="90" x2="705" y1="370" y2="370"></line>
+        </g>
+
+        <g class="labels x-labels">
+          <text x="100" y="400">2008</text>
+          <text x="246" y="400">2009</text>
+          <text x="392" y="400">2010</text>
+          <text x="538" y="400">2011</text>
+          <text x="684" y="400">2012</text>
+          <text x="400" y="440" class="label-title">Day</text>
+        </g>
+
+        <g class="labels y-labels">
+          <text x="80" y="15">15</text>
+          <text x="80" y="131">10</text>
+          <text x="80" y="248">5</text>
+          <text x="80" y="373">0</text>
+          <text x="50" y="200" class="label-title">Score</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js" integrity="sha256-1hjUhpc44NwiNg8OwMu2QzJXhD8kcj+sJA3aCQZoUjg=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="fifty-five.js"></script>
+</body>
+
+</html>
