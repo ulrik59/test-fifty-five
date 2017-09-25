@@ -22,12 +22,16 @@
 }
 
 .graph {
-  width: 800px;
+  width: 1500px;
   height: 500px;
 }
 
+.graph text {
+  fill: #ccc;
+}
+
 .graph .labels.x-labels {
-  text-anchor: middle;
+  text-anchor: start;
 }
 
 .graph .labels.y-labels {
@@ -51,7 +55,10 @@
   fill: black;
 }
 
-.data {
-  fill: red;
-  stroke-width: 1;
+.player-info {
+  width: 60%;
+  border: 1px dashed #ccc;
+  margin: auto;
+  padding: 10px;
+  display: none;
 }
