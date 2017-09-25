@@ -5,16 +5,16 @@
 
   const refreshButton = document.getElementById('refresh-button');
   const titleEl = document.getElementById('title');
-  const graphTitleEl = document.getElementsByClassName('graph-title')[0];
-  const xLabelsEl = document.getElementsByClassName('x-labels')[0];
-  const dataEl = document.getElementsByClassName('data')[0];
+  const graphTitleEl = document.getElementById('graphTitle');
+  const xLabelsEl = document.getElementById('xLabels');
+  const dataEl = document.getElementById('data');
 
-  const playerInfoEl = document.getElementsByClassName('player-info')[0];
-  const playerNameEl = document.getElementsByClassName('player-name')[0];
-  const playerAverageEl = document.getElementsByClassName('player-average')[0];
-  const playerMedianEl = document.getElementsByClassName('player-median')[0];
-  const playerMaxEl = document.getElementsByClassName('player-max')[0];
-  const playerMinEl = document.getElementsByClassName('player-min')[0];
+  const playerInfoEl = document.getElementById('player-info');
+  const playerNameEl = document.getElementById('player-name');
+  const playerAverageEl = document.getElementById('player-average');
+  const playerMedianEl = document.getElementById('player-median');
+  const playerMaxEl = document.getElementById('player-max');
+  const playerMinEl = document.getElementById('player-min');
 
   let apiData = {};
 
@@ -31,6 +31,7 @@
   }
 
   function renderPlayerInfo(playerId) {
+    document.location.hash = playerId;
     const player = apiData.settings.dictionary[playerId];
     const playerScores = apiData.data.DAILY.dataByMember.players[playerId].points.filter(score => score !== null);
 
@@ -56,11 +57,11 @@
 
     filteredDates.forEach((date, index) => {
       const svgText = document.createElementNS(svgUri, 'text');
+
       svgText.setAttribute('x', 100 + (index * xColumnWidth));
       svgText.setAttribute('y', 400);
+      svgText.textContent = moment(date, 'YYYYMMDD').format('DD/MM');
 
-      const textNode = document.createTextNode(moment(date, 'YYYYMMDD').format('DD/MM'));
-      svgText.appendChild(textNode);
       xLabelsEl.appendChild(svgText);
     });
 
@@ -112,6 +113,11 @@
       .then((data) => {
         apiData = data;
         renderGraph();
+
+        const locationHash = document.location.hash.substring(1);
+        if (locationHash && Object.keys(apiData.settings.dictionary).includes(locationHash)) {
+          renderPlayerInfo(locationHash);
+        }
       });
   }
 

@@ -28,7 +28,7 @@
 
     <div class="graph-container">
       <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="graph" aria-labelledby="title" role="img">
-        <title class="graph-title"></title>
+        <title id="graphTitle"></title>
 
         <g class="grid x-grid" id="xGrid">
           <line x1="90" x2="90" y1="5" y2="371"></line>
@@ -38,11 +38,11 @@
           <line x1="90" x2="1405" y1="370" y2="370"></line>
         </g>
 
-        <g class="labels x-labels">
+        <g id="xLabels" class="labels x-labels">
           <text x="750" y="440" class="label-title">Day</text>
         </g>
 
-        <g class="labels y-labels">
+        <g id="yLabels" class="labels y-labels">
           <text x="80" y="15">1000</text>
           <text x="80" y="105">750</text>
           <text x="80" y="194">500</text>
@@ -51,18 +51,18 @@
           <text x="50" y="200" class="label-title">Score</text>
         </g>
 
-        <g class="data"></g>
+        <g id="data"></g>
       </svg>
     </div>
 
-    <div class="player-info">
-      <h3 class="player-name"></h3>
+    <div id="player-info">
+      <h3 id="player-name"></h3>
 
       <ul>
-        <li><strong>Average:</strong> <span class="player-average"></span></li>
-        <li><strong>Median:</strong> <span class="player-median"></span></li>
-        <li><strong>Max:</strong> <span class="player-max"></span></li>
-        <li><strong>Min:</strong> <span class="player-min"></span></li>
+        <li><strong>Average:</strong> <span id="player-average"></span></li>
+        <li><strong>Median:</strong> <span id="player-median"></span></li>
+        <li><strong>Max:</strong> <span id="player-max"></span></li>
+        <li><strong>Min:</strong> <span id="player-min"></span></li>
       </ul>
     </div>
   </section>
